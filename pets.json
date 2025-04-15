@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "Luna",
+      "type": "perro",
+      "age": 3,
+      "sex": "hembra",
+      "description": "Muy cariñosa, le encanta dormir al sol y se lleva bien con otros gatos.",
+      "caretakerId": 1
+    },
+    {
+      "id": 2,
+      "name": "Michi",
+      "type": "gato",
+      "age": 4,
+      "sex": "macho",
+      "description": "Muy tranquilo y cariñoso. Se lleva bien con los perros.",
+      "caretakerId": 2
+    }
+]
