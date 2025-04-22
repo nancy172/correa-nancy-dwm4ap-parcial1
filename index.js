@@ -1,9 +1,11 @@
 import express from "express";
 import chalk from "chalk";
 import dotenv from "dotenv";
+import mongoose from "mongoose";
 dotenv.config();
 
 const port = process.env.PORT;
+const dburi = process.env.MONGODB_URI;
 
 const app = express();
 import routerApi from "./routes/index.js";
