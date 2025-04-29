@@ -10,6 +10,15 @@ const dburi = process.env.MONGODB_URI;
 const app = express();
 import routerApi from "./routes/index.js";
 
+// Conexión con la base de datos
+mongoose.connect(dburi);
+const db = mongoose.connection;
+
+db.on( 'error', () => {console.error({error})});
+
+db.once( 'open', () => {console.log("Conexión con la base de datos.")});
+
+
 // Middlewares
 app.use(express.json());
 app.use(express.static('public'));
