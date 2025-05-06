@@ -56,7 +56,7 @@
             <ul class="list-group">
               <li class="list-group-item">
                   <div class="d-flex flex-column">
-                      <code class="mb-2">GET /api/pets</code>
+                      <code class="mb-2"><span class="get-color">GET</span> /api/pets</code>
                       <p>Obtener todas las mascotas.</p>
                       <a href="http://localhost:5000/api/pets" target="_blank">
                           <button class="btn btn-primary btn-sm">Probar Endpoint</button>
@@ -65,7 +65,7 @@
               </li>
               <li class="list-group-item">
                   <div class="d-flex flex-column">
-                      <code class="mb-2">GET /api/pets/:id</code>
+                      <code class="mb-2"><span class="get-color">GET</span> /api/pets/:id</code>
                       <p>Obtener una mascota por ID.</p>
                       <a href="http://localhost:5000/api/pets/6817015cd9024a2d9e9e0980" target="_blank">
                           <button class="btn btn-primary btn-sm">Probar Endpoint</button>
@@ -74,7 +74,7 @@
               </li>
               <li class="list-group-item">
                   <div class="d-flex flex-column">
-                      <code class="mb-2">GET /api/pets/search?name=Nina</code>
+                      <code class="mb-2"><span class="get-color">GET</span> /api/pets/search?name=Nina</code>
                       <p>Buscar mascotas por nombre.</p>
                       <a href="http://localhost:5000/api/pets/search?name=Nina" target="_blank">
                           <button class="btn btn-primary btn-sm">Probar Endpoint</button>
@@ -83,7 +83,7 @@
               </li>
               <li class="list-group-item">
                   <div class="d-flex flex-column">
-                      <code class="mb-2">GET /api/pets/filter?type=gato</code>
+                      <code class="mb-2"><span class="get-color">GET</span> /api/pets/filter?type=gato</code>
                       <p>Filtrar mascotas por tipo.</p>
                       <a href="http://localhost:5000/api/pets/filter?type=gato" target="_blank">
                           <button class="btn btn-primary btn-sm">Probar Endpoint</button>
@@ -92,7 +92,7 @@
               </li>
               <li class="list-group-item">
                   <div class="d-flex flex-column">
-                      <code class="mb-2">GET /api/pets/filter?sex=hembra</code>
+                      <code class="mb-2"><span class="get-color">GET</span> /api/pets/filter?sex=hembra</code>
                       <p>Filtrar mascotas por sexo.</p>
                       <a href="http://localhost:5000/api/pets/filter?sex=hembra" target="_blank">
                           <button class="btn btn-primary btn-sm">Probar Endpoint</button>
@@ -101,7 +101,7 @@
               </li>
               <li class="list-group-item">
                   <div class="d-flex flex-column">
-                      <code class="mb-2">GET /api/pets/filter?type=gato&&sex=hembra</code>
+                      <code class="mb-2"><span class="get-color">GET</span> /api/pets/filter?type=gato&&sex=hembra</code>
                       <p>Filtrar mascotas por tipo y sexo.</p>
                       <a href="http://localhost:5000/api/pets/filter?type=gato&&sex=hembra" target="_blank">
                           <button class="btn btn-primary btn-sm">Probar Endpoint</button>
@@ -110,20 +110,20 @@
               </li>
               <li class="list-group-item">
                   <div class="d-flex flex-column">
-                      <code class="mb-2">POST /api/pets</code>
+                      <code class="mb-2"><span class="post-color">POST</span> /api/pets</code>
                       <p>Agregar una nueva mascota.</p>
                   </div>
               </li>
               <li class="list-group-item">
                   <div class="d-flex flex-column">
-                      <code class="mb-2">PUT /api/pets/:id</code>
-                      <p>Actualizar una mascota existente.</p>
+                      <code class="mb-2"><span class="put-color">PUT</span> /api/pets/:id</code>
+                      <p>Actualizar una mascota existente por ID.</p>
                   </div>
               </li>
               <li class="list-group-item">
                   <div class="d-flex flex-column">
-                      <code class="mb-2">DELETE /api/pets/:id</code>
-                      <p>Eliminar una mascota.</p>
+                      <code class="mb-2"><span class="delete-color">DELETE</span> /api/pets/:id</code>
+                      <p>Eliminar una mascota por ID.</p>
                   </div>
               </li>
             </ul>
@@ -137,7 +137,7 @@
         <ul class="list-group">
           <li class="list-group-item">
             <div class="d-flex flex-column">
-              <code class="mb-2">GET /api/caretakers</code>
+              <code class="mb-2"><span class="get-color">GET</span> /api/caretakers</code>
               <p>Obtener todos los cuidadores.</p>
               <a href="http://localhost:5000/api/caretakers" target="_blank">
                 <button class="btn btn-primary btn-sm">Probar Endpoint</button>
@@ -146,7 +146,7 @@
           </li>
           <li class="list-group-item">
             <div class="d-flex flex-column">
-              <code class="mb-2">GET /api/caretakers/:id</code>
+              <code class="mb-2"><span class="get-color">GET</span> /api/caretakers/:id</code>
               <p>Obtener un cuidador por ID.</p>
               <a href="http://localhost:5000/api/caretakers/6816a872d9024a2d9e9e096f" target="_blank">
                 <button class="btn btn-primary btn-sm">Probar Endpoint</button>
@@ -155,7 +155,7 @@
           </li>
           <li class="list-group-item">
             <div class="d-flex flex-column">
-              <code class="mb-2">GET /api/caretakers/search?name=patitas</code>
+              <code class="mb-2"><span class="get-color">GET</span> /api/caretakers/search?name=patitas</code>
               <p>Buscar cuidadores por nombre.</p>
               <a href="http://localhost:5000/api/caretakers/search?name=patitas" target="_blank">
                 <button class="btn btn-primary btn-sm">Probar Endpoint</button>
@@ -164,7 +164,7 @@
           </li>
           <li class="list-group-item">
             <div class="d-flex flex-column">
-              <code class="mb-2">GET /api/caretakers/filter?type=refugio</code>
+              <code class="mb-2"><span class="get-color">GET</span> /api/caretakers/filter?type=refugio</code>
               <p>Filtrar cuidadores por tipo.</p>
               <a href="http://localhost:5000/api/caretakers/filter?type=refugio" target="_blank">
                 <button class="btn btn-primary btn-sm">Probar Endpoint</button>
@@ -173,7 +173,7 @@
           </li>
           <li class="list-group-item">
             <div class="d-flex flex-column">
-              <code class="mb-2">GET /api/caretakers/filter?acceptsVisits=true</code>
+              <code class="mb-2"><span class="get-color">GET</span> /api/caretakers/filter?acceptsVisits=true</code>
               <p>Filtrar cuidadores según si aceptan o no visitas.</p>
               <a href="http://localhost:5000/api/caretakers/filter?acceptsVisits=true" target="_blank">
                 <button class="btn btn-primary btn-sm">Probar Endpoint</button>
@@ -182,7 +182,7 @@
           </li>
           <li class="list-group-item">
             <div class="d-flex flex-column">
-              <code class="mb-2">GET /api/caretakers/filter?type=particular&&acceptsVisits=true</code>
+              <code class="mb-2"><span class="get-color">GET</span> /api/caretakers/filter?type=particular&&acceptsVisits=true</code>
               <p>Filtrar cuidadores por tipo y si aceptan visitas.</p>
               <a href="http://localhost:5000/api/caretakers/filter?type=particular&&acceptsVisits=true" target="_blank">
                 <button class="btn btn-primary btn-sm">Probar Endpoint</button>
@@ -191,20 +191,20 @@
           </li>
           <li class="list-group-item">
             <div class="d-flex flex-column">
-              <code class="mb-2">POST /api/caretakers</code>
+              <code class="mb-2"><span class="post-color">POST</span> /api/caretakers</code>
               <p>Agregar un nuevo cuidador.</p>
             </div>
           </li>
           <li class="list-group-item">
             <div class="d-flex flex-column">
-              <code class="mb-2">PUT /api/caretakers/:id</code>
-              <p>Actualizar un cuidador existente.</p>
+              <code class="mb-2"><span class="put-color">PUT</span> /api/caretakers/:id</code>
+              <p>Actualizar un cuidador existente por ID.</p>
             </div>
           </li>
           <li class="list-group-item">
             <div class="d-flex flex-column">
-              <code class="mb-2">DELETE /api/caretakers/:id</code>
-              <p>Eliminar un cuidador.</p>
+              <code class="mb-2"><span class="delete-color">DELETE</span> /api/caretakers/:id</code>
+              <p>Eliminar un cuidador por ID.</p>
             </div>
           </li>
         </ul>

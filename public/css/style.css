@@ -39,6 +39,18 @@ section.bg-light {
 #pets li, #caretakers li {
     padding: 1.5em 1em;
 }
+.get-color{
+    color: green;
+}
+.post-color{
+    color: rgb(236, 154, 0);
+}
+.put-color{
+    color: blue;
+}
+.delete-color{
+    color: red;
+}
   
 
 @media (min-width: 768px) {
