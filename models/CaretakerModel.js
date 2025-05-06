@@ -16,9 +16,9 @@ const caretakerSchema = new Schema({
     enum: ['refugio', 'particular'],
     required: true
   },
-  location: {
-    type: String,
-    required: false
+  acceptsVisits: {
+    type: Boolean,
+    required: true
   }
 });
 

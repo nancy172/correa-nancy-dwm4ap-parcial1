@@ -3,6 +3,7 @@ import Caretaker from "../models/CaretakerModel.js";
 // Validaciones
 const validateCaretaker = (caretaker, isUpdate = false) => {
     const okTypes = ['refugio', 'particular'];
+    const okPetsAvailable = ['1', '2+', '5+', '10+', '25+'];
 
     if(!isUpdate || caretaker.name !== undefined){
         if (!caretaker.name || typeof caretaker.name !== 'string' ||  caretaker.name.trim() === '') {
@@ -22,9 +23,9 @@ const validateCaretaker = (caretaker, isUpdate = false) => {
         }
     }
 
-    if(!isUpdate || caretaker.location !== undefined){
-        if (!caretaker.location || typeof caretaker.location !== 'string' ||  caretaker.location.trim() === '') {
-            throw new Error("ERROR: La localización del responsable debe ser un texto y no puede quedar vacío.");
+    if (!isUpdate || caretaker.acceptsVisits !== undefined) {
+        if (typeof caretaker.acceptsVisits !== 'boolean') {
+            throw new Error("ERROR: El campo 'acceptsVisits' debe ser true o false.");
         }
     }
 
@@ -61,7 +62,7 @@ const addCaretaker = async (req, res) => {
     const caretaker = req.body;
 
     // Se verifica los parámetros completos
-    if(!caretaker.name || !caretaker.contact ||!caretaker.type ||!caretaker.location){
+    if(!caretaker.name || !caretaker.contact ||!caretaker.type || !caretaker.acceptsVisits){
         return res.status(400).json({msg: "ERROR: Faltan completar parámetros."});
     }
 
@@ -122,7 +123,7 @@ const filterCaretakers = async (req, res) => {
 
     try {
 
-        const {type, location} = req.query;    // Con query se extraen los valores de los parámetros de la url
+        const {type, acceptsVisits} = req.query;    // Con query se extraen los valores de los parámetros de la url
 
         const filter = {};
         
@@ -131,9 +132,13 @@ const filterCaretakers = async (req, res) => {
             filter.type = type.toLowerCase(); 
         }
 
-        // Filtro y validación por localización:
-        if ( location && location.trim() !== "" ) {
-            filter.location = location.toLowerCase();
+        // Filtro y validación por aceptación de visitas:
+        if (acceptsVisits !== undefined) {
+            const validVisits = acceptsVisits === 'true' || acceptsVisits === 'false';
+            if (!validVisits) {
+                return res.status(400).json({ msg: "El valor de 'acceptsVisits' debe ser 'true' o 'false'." });
+            }
+            filter.acceptsVisits = acceptsVisits === 'true'; // Se convierte a booleano
         }
 
         // Se verifica si el objeto filter está vacío

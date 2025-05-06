@@ -25,8 +25,8 @@ app.use(express.static('public'));
 
 // Home
 app.get('/', (request, response) =>{
-    console.log('Ruta Raíz');
-    response.send('Home');
+    response.sendFile('Home');
+    // res.sendFile('index.html', { root: './public' });
 })
 
 // Se llaman a las rutas
@@ -34,5 +34,5 @@ routerApi(app);
 
 
 app.listen( port, () => {
-    console.log(   chalk.green(`Servidor Web en el puerto ${port}`)  );    
+    console.log(   chalk.green(`Servidor Web corriendo en http://localhost:${port}`)  );    
 })

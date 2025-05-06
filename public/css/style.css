@@ -1,0 +1,49 @@
+.btn-primary {
+    background-color: #f57c00;
+    border-color: #f57c00;
+    color: white;
+}
+  
+.btn-primary:hover {
+    background-color: #e65100;
+    border-color: #e65100;
+    color: white;
+}
+
+.bg-primary {
+    background-color: #f57c00 !important;
+}
+  
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: white;
+}
+  
+.navbar-custom .nav-link:hover {
+    color: #ffe0b2;
+} 
+
+section.bg-light {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.intro-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 1.5em;
+}
+
+#pets li, #caretakers li {
+    padding: 1.5em 1em;
+}
+  
+
+@media (min-width: 768px) {
+    .intro-img {
+      max-width: 450px;
+    }
+}
+  
