@@ -13,7 +13,7 @@ const caretakerSchema = new Schema({
   },
   type: {
     type: String,
-    enum: ['refugio', 'casa temporal', 'particular'],
+    enum: ['refugio', 'particular'],
     required: true
   },
   location: {

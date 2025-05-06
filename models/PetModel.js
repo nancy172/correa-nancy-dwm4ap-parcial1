@@ -8,12 +8,13 @@ const petSchema = new Schema({
         required: true 
     },  
     type: { 
-        type: String, 
+        type: String,
+        enum: ['perro', 'gato', 'conejo', 'otro'],
         required: true 
     },  
     age: { 
-        type: Number, 
-        required: true 
+        value: { type: Number, required: true },
+        unit: { type: String, enum: ['días', 'meses', 'años'], required: true } 
     },  
     sex: { 
         type: String, 
@@ -27,10 +28,6 @@ const petSchema = new Schema({
     caretaker: { 
         type: String, 
         required: true 
-    }, 
-    image: { 
-        type: String, 
-        required: false 
     }
 });
 
