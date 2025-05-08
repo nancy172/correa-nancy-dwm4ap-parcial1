@@ -46,6 +46,18 @@ const validateEmail = async (email, userId = null, isUpdate = false) => {
     }
 };
 
+const validateRole = async (role, isUpdate = false) => {
+
+    if (isUpdate && role === undefined) return;
+
+    const okRoles = ['cuidador', 'adoptante'];
+
+    if (!role || typeof role !== 'string' || !okRoles.includes(role.toLowerCase())) {
+        throw new Error("ERROR: El rol del usuario debe ser 'cuidador' o 'adoptante'.");
+    }
+    
+};
+
 // Controladores
 const getUsers = async (req, res) => {
     try {
@@ -85,6 +97,7 @@ const addUser = async (req, res) => {
         await validateName(user.name);
         await validateEmail(user.email);
         await validatePhone(user.phone);
+        await validateRole(user.role);
 
         const doc = new User(user);
         await doc.save();
@@ -133,6 +146,10 @@ const updateUser = async (req, res) => {
 
         if (user.phone !== undefined) {
             await validatePhone(user.phone, true);
+        }
+
+        if (user.role !== undefined) {
+            await validateRole(user.role, true);
         }
 
         const newUser = await User.findByIdAndUpdate(id, user, {new: true});

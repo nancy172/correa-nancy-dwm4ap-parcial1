@@ -1,17 +1,5 @@
-.btn-primary {
-    background-color: #f57c00;
-    border-color: #f57c00;
-    color: white;
-}
-  
-.btn-primary:hover {
-    background-color: #e65100;
-    border-color: #e65100;
-    color: white;
-}
-
 .bg-primary {
-    background-color: #f57c00 !important;
+    background-color: #ff9a34 !important;
 }
   
 .navbar-custom .navbar-brand,
@@ -36,20 +24,20 @@ section.bg-light {
     border-radius: 1.5em;
 }
 
-#pets li, #caretakers li {
-    padding: 1.5em 1em;
+.card-header {
+    font-size: 1.1rem;
 }
-.get-color{
-    color: green;
+
+.bg-put{
+    background-color: rgb(55, 142, 255);
 }
-.post-color{
-    color: rgb(236, 154, 0);
+.border-put{
+    border-color: rgb(55, 142, 255);
 }
-.put-color{
-    color: blue;
-}
-.delete-color{
-    color: red;
+
+.bg-footer {
+    background-color: #333333;
+    
 }
   
 

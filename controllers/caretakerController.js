@@ -3,7 +3,6 @@ import Caretaker from "../models/CaretakerModel.js";
 // Validaciones
 const validateCaretaker = (caretaker, isUpdate = false) => {
     const okTypes = ['refugio', 'particular'];
-    const okPetsAvailable = ['1', '2+', '5+', '10+', '25+'];
 
     if(!isUpdate || caretaker.name !== undefined){
         if (!caretaker.name || typeof caretaker.name !== 'string' ||  caretaker.name.trim() === '') {

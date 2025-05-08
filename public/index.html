@@ -10,7 +10,7 @@
 <body>
     
     <!--NAVEGACIÓN-->
-    <header class="bg-primary text-white">
+    <header class="bg-primary text-white py-3">
         <nav class="navbar navbar-expand-lg navbar-dark container navbar-custom">
             <a class="navbar-brand" href="#">API Adopción Mascotas</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -38,7 +38,7 @@
                     <div class="col-md-6 text-center text-md-start">
                       <h1 class="mb-7">Bienvenido a la API de Adopción de Mascotas</h1>
                       <p class="lead pt-5">
-                        Esta API permite gestionar información sobre mascotas y cuidadores. Se puede acceder a endpoints para listar, buscar, filtrar, agregar, editar y eliminar datos.
+                        Esta API permite gestionar información sobre mascotas y cuidadores (refugios o particular). Se puede acceder a endpoints para listar, buscar, filtrar, agregar, editar y eliminar datos.
                       </p>
                     </div>
                     <div class="col-md-5 text-center">
@@ -53,80 +53,93 @@
 
             <h2 class="mb-4">Mascotas (Pets)</h2>
 
-            <ul class="list-group">
-              <li class="list-group-item">
-                  <div class="d-flex flex-column">
-                      <code class="mb-2"><span class="get-color">GET</span> /api/pets</code>
-                      <p>Obtener todas las mascotas.</p>
-                      <a href="http://localhost:5000/api/pets" target="_blank">
-                          <button class="btn btn-primary btn-sm">Probar Endpoint</button>
-                      </a>
-                  </div>
-              </li>
-              <li class="list-group-item">
-                  <div class="d-flex flex-column">
-                      <code class="mb-2"><span class="get-color">GET</span> /api/pets/:id</code>
-                      <p>Obtener una mascota por ID.</p>
-                      <a href="http://localhost:5000/api/pets/6817015cd9024a2d9e9e0980" target="_blank">
-                          <button class="btn btn-primary btn-sm">Probar Endpoint</button>
-                      </a>
-                  </div>
-              </li>
-              <li class="list-group-item">
-                  <div class="d-flex flex-column">
-                      <code class="mb-2"><span class="get-color">GET</span> /api/pets/search?name=Nina</code>
-                      <p>Buscar mascotas por nombre.</p>
-                      <a href="http://localhost:5000/api/pets/search?name=Nina" target="_blank">
-                          <button class="btn btn-primary btn-sm">Probar Endpoint</button>
-                      </a>
-                  </div>
-              </li>
-              <li class="list-group-item">
-                  <div class="d-flex flex-column">
-                      <code class="mb-2"><span class="get-color">GET</span> /api/pets/filter?type=gato</code>
-                      <p>Filtrar mascotas por tipo.</p>
-                      <a href="http://localhost:5000/api/pets/filter?type=gato" target="_blank">
-                          <button class="btn btn-primary btn-sm">Probar Endpoint</button>
-                      </a>
-                  </div>
-              </li>
-              <li class="list-group-item">
-                  <div class="d-flex flex-column">
-                      <code class="mb-2"><span class="get-color">GET</span> /api/pets/filter?sex=hembra</code>
-                      <p>Filtrar mascotas por sexo.</p>
-                      <a href="http://localhost:5000/api/pets/filter?sex=hembra" target="_blank">
-                          <button class="btn btn-primary btn-sm">Probar Endpoint</button>
-                      </a>
-                  </div>
-              </li>
-              <li class="list-group-item">
-                  <div class="d-flex flex-column">
-                      <code class="mb-2"><span class="get-color">GET</span> /api/pets/filter?type=gato&&sex=hembra</code>
-                      <p>Filtrar mascotas por tipo y sexo.</p>
-                      <a href="http://localhost:5000/api/pets/filter?type=gato&&sex=hembra" target="_blank">
-                          <button class="btn btn-primary btn-sm">Probar Endpoint</button>
-                      </a>
-                  </div>
-              </li>
-              <li class="list-group-item">
-                  <div class="d-flex flex-column">
-                      <code class="mb-2"><span class="post-color">POST</span> /api/pets</code>
-                      <p>Agregar una nueva mascota.</p>
-                  </div>
-              </li>
-              <li class="list-group-item">
-                  <div class="d-flex flex-column">
-                      <code class="mb-2"><span class="put-color">PUT</span> /api/pets/:id</code>
-                      <p>Actualizar una mascota existente por ID.</p>
-                  </div>
-              </li>
-              <li class="list-group-item">
-                  <div class="d-flex flex-column">
-                      <code class="mb-2"><span class="delete-color">DELETE</span> /api/pets/:id</code>
-                      <p>Eliminar una mascota por ID.</p>
-                  </div>
-              </li>
-            </ul>
+            <div class="card border-success mb-3">
+              <div class="card-header bg-success text-white">
+                <strong>GET</strong> /api/pets
+              </div>
+              <div class="card-body">
+                <p class="card-text">Obtener todas las mascotas.</p>
+                <a href="http://localhost:5000/api/pets" target="_blank" class="btn btn-outline-success btn-sm">Probar Endpoint</a>
+              </div>
+            </div>
+
+            <div class="card border-success mb-3">
+              <div class="card-header bg-success text-white">
+                <strong>GET</strong> /api/pets/search?name=Nina
+              </div>
+              <div class="card-body">
+                <p>Buscar mascotas por nombre.</p>
+                <a href="http://localhost:5000/api/pets/search?name=Nina" target="_blank" class="btn btn-outline-success btn-sm">Probar Endpoint</a>
+              </div>
+            </div>
+
+            <div class="card border-success mb-3">
+              <div class="card-header bg-success text-white">
+                <strong>GET</strong> /api/pets/filter?type=gato
+              </div>
+              <div class="card-body">
+                <p>Filtrar mascotas por tipo.</p>
+                <a href="http://localhost:5000/api/pets/filter?type=gato" target="_blank" class="btn btn-outline-success btn-sm">Probar Endpoint</a>
+              </div>
+            </div>
+
+            <div class="card border-success mb-3">
+              <div class="card-header bg-success text-white">
+                <strong>GET</strong> /api/pets/filter?sex=hembra
+              </div>
+              <div class="card-body">
+                <p>Filtrar mascotas por sexo.</p>
+                <a href="http://localhost:5000/api/pets/filter?sex=hembra" target="_blank" class="btn btn-outline-success btn-sm">Probar Endpoint</a>
+              </div>
+            </div>
+
+            <div class="card border-success mb-3">
+              <div class="card-header bg-success text-white">
+                <strong>GET</strong> /api/pets/filter?type=gato&&sex=hembra
+              </div>
+              <div class="card-body">
+                <p>Filtrar mascotas por tipo y sexo.</p>
+                <a href="http://localhost:5000/api/pets/filter?type=gato&sex=hembra" target="_blank" class="btn btn-outline-success btn-sm">Probar Endpoint</a>
+              </div>
+            </div>
+
+            <div class="card border-success mb-3">
+              <div class="card-header bg-success text-white">
+                <strong>GET</strong> /api/pets/:id
+              </div>
+              <div class="card-body">
+                <p class="card-text">Obtener una mascota por ID.</p>
+                <a href="http://localhost:5000/api/pets/6817015cd9024a2d9e9e0980" target="_blank" class="btn btn-outline-success btn-sm">Probar Endpoint</a>
+              </div>
+            </div>
+
+            <div class="card border-warning mb-3">
+              <div class="card-header bg-warning text-dark">
+                <strong>POST</strong> /api/pets
+              </div>
+              <div class="card-body">
+                <p class="card-text">Agregar una nueva mascota.</p>
+              </div>
+            </div>
+
+            <div class="card border-put mb-3">
+              <div class="card-header bg-put text-white">
+                <strong>PUT</strong> /api/pets/:id
+              </div>
+              <div class="card-body">
+                <p class="card-text">Actualizar una mascota existente por ID.</p>
+              </div>
+            </div>
+
+            <div class="card border-danger mb-3">
+              <div class="card-header bg-danger text-white">
+                <strong>DELETE</strong> /api/pets/:id
+              </div>
+              <div class="card-body">
+                <p class="card-text">Eliminar una mascota por ID.</p>
+              </div>
+            </div>
+
       </section>
   
       <!-- DOCUMENTACIÓN CARETAKERS -->
@@ -134,85 +147,98 @@
 
         <h2 class="mb-4">Cuidadores (Caretakers)</h2>
 
-        <ul class="list-group">
-          <li class="list-group-item">
-            <div class="d-flex flex-column">
-              <code class="mb-2"><span class="get-color">GET</span> /api/caretakers</code>
-              <p>Obtener todos los cuidadores.</p>
-              <a href="http://localhost:5000/api/caretakers" target="_blank">
-                <button class="btn btn-primary btn-sm">Probar Endpoint</button>
-              </a>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="d-flex flex-column">
-              <code class="mb-2"><span class="get-color">GET</span> /api/caretakers/:id</code>
-              <p>Obtener un cuidador por ID.</p>
-              <a href="http://localhost:5000/api/caretakers/6816a872d9024a2d9e9e096f" target="_blank">
-                <button class="btn btn-primary btn-sm">Probar Endpoint</button>
-              </a>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="d-flex flex-column">
-              <code class="mb-2"><span class="get-color">GET</span> /api/caretakers/search?name=patitas</code>
-              <p>Buscar cuidadores por nombre.</p>
-              <a href="http://localhost:5000/api/caretakers/search?name=patitas" target="_blank">
-                <button class="btn btn-primary btn-sm">Probar Endpoint</button>
-              </a>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="d-flex flex-column">
-              <code class="mb-2"><span class="get-color">GET</span> /api/caretakers/filter?type=refugio</code>
-              <p>Filtrar cuidadores por tipo.</p>
-              <a href="http://localhost:5000/api/caretakers/filter?type=refugio" target="_blank">
-                <button class="btn btn-primary btn-sm">Probar Endpoint</button>
-              </a>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="d-flex flex-column">
-              <code class="mb-2"><span class="get-color">GET</span> /api/caretakers/filter?acceptsVisits=true</code>
-              <p>Filtrar cuidadores según si aceptan o no visitas.</p>
-              <a href="http://localhost:5000/api/caretakers/filter?acceptsVisits=true" target="_blank">
-                <button class="btn btn-primary btn-sm">Probar Endpoint</button>
-              </a>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="d-flex flex-column">
-              <code class="mb-2"><span class="get-color">GET</span> /api/caretakers/filter?type=particular&&acceptsVisits=true</code>
-              <p>Filtrar cuidadores por tipo y si aceptan visitas.</p>
-              <a href="http://localhost:5000/api/caretakers/filter?type=particular&&acceptsVisits=true" target="_blank">
-                <button class="btn btn-primary btn-sm">Probar Endpoint</button>
-              </a>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="d-flex flex-column">
-              <code class="mb-2"><span class="post-color">POST</span> /api/caretakers</code>
-              <p>Agregar un nuevo cuidador.</p>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="d-flex flex-column">
-              <code class="mb-2"><span class="put-color">PUT</span> /api/caretakers/:id</code>
-              <p>Actualizar un cuidador existente por ID.</p>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="d-flex flex-column">
-              <code class="mb-2"><span class="delete-color">DELETE</span> /api/caretakers/:id</code>
-              <p>Eliminar un cuidador por ID.</p>
-            </div>
-          </li>
-        </ul>
-    </section>
+        <div class="card border-success mb-3">
+          <div class="card-header bg-success text-white">
+            <strong>GET</strong> /api/caretakers
+          </div>
+          <div class="card-body">
+            <p>Obtener todos los cuidadores.</p>
+            <a href="http://localhost:5000/api/caretakers" target="_blank" class="btn btn-outline-success btn-sm">Probar Endpoint</a>
+          </div>
+        </div>
+
+        <div class="card border-success mb-3">
+          <div class="card-header bg-success text-white">
+            <strong>GET</strong> /api/caretakers/:id
+          </div>
+          <div class="card-body">
+            <p>Obtener un cuidador por ID.</p>
+            <a href="http://localhost:5000/api/caretakers/6816a872d9024a2d9e9e096f" target="_blank" class="btn btn-outline-success btn-sm">Probar Endpoint</a>
+          </div>
+        </div>
+
+        <div class="card border-success mb-3">
+          <div class="card-header bg-success text-white">
+            <strong>GET</strong> /api/caretakers/search?name=federico
+          </div>
+          <div class="card-body">
+            <p>Buscar cuidadores por nombre.</p>
+            <a href="http://localhost:5000/api/caretakers/search?name=federico" target="_blank" class="btn btn-outline-success btn-sm">Probar Endpoint</a>
+          </div>
+        </div>
+
+        <div class="card border-success mb-3">
+          <div class="card-header bg-success text-white">
+            <strong>GET</strong> /api/caretakers/filter?type=refugio
+          </div>
+          <div class="card-body">
+            <p>Filtrar cuidadores por tipo.</p>
+            <a href="http://localhost:5000/api/caretakers/filter?type=refugio" target="_blank" class="btn btn-outline-success btn-sm">Probar Endpoint</a>
+          </div>
+        </div>
+
+        <div class="card border-success mb-3">
+          <div class="card-header bg-success text-white">
+            <strong>GET</strong> /api/caretakers/filter?acceptsVisits=true
+          </div>
+          <div class="card-body">
+            <p>Filtrar cuidadores según si aceptan o no visitas.</p>
+            <a href="http://localhost:5000/api/caretakers/filter?acceptsVisits=true" target="_blank" class="btn btn-outline-success btn-sm">Probar Endpoint</a>
+          </div>
+        </div>
+
+        <div class="card border-success mb-3">
+          <div class="card-header bg-success text-white">
+            <strong>GET</strong> /api/caretakers/filter?type=particular&&acceptsVisits=true
+          </div>
+          <div class="card-body">
+            <p>Filtrar cuidadores por tipo y si aceptan visitas.</p>
+            <a href="http://localhost:5000/api/caretakers/filter?type=particular&&acceptsVisits=true" target="_blank" class="btn btn-outline-success btn-sm">Probar Endpoint</a>
+          </div>
+        </div>
+
+        <div class="card border-warning mb-3">
+          <div class="card-header bg-warning text-dark">
+            <strong>POST</strong> /api/caretakers
+          </div>
+          <div class="card-body">
+            <p>Agregar un nuevo cuidador.</p>
+          </div>
+        </div>
+
+        <div class="card border-put mb-3">
+          <div class="card-header bg-put text-white">
+            <strong>PUT</strong> /api/caretakers/:id
+          </div>
+          <div class="card-body">
+            <p>Actualizar un cuidador existente por ID.</p>
+          </div>
+        </div>
+
+        <div class="card border-danger mb-3">
+          <div class="card-header bg-danger text-white">
+            <strong>DELETE</strong> /api/caretakers/:id
+          </div>
+          <div class="card-body">
+            <p>Eliminar un cuidador por ID.</p>
+          </div>
+        </div>
+
+      </section>
 
     </main>
 
-    <footer class="bg-dark text-white text-center py-4">
+    <footer class="bg-footer text-white text-center py-5">
         <div class="container">
           <p class="mb-0">Nancy Correa | Aplicaciones Híbridas | Prof. Jonathan Emanuel Cruz | DWM4AP</p>
         </div>

@@ -15,6 +15,11 @@ const userSchema = new Schema({
   phone: {
     type: Number,
     required: false
+  },
+  role: {
+    type: String,
+    enum: ['cuidador', 'adoptante'],
+    required: true
   }
 });
 
