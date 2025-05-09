@@ -23,12 +23,6 @@ db.once( 'open', () => {console.log("Conexión con la base de datos.")});
 app.use(express.json());
 app.use(express.static('public'));
 
-// Home
-app.get('/', (request, response) =>{
-    response.sendFile('Home');
-    // res.sendFile('index.html', { root: './public' });
-})
-
 // Se llaman a las rutas
 routerApi(app);
 
